@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,71 @@
     <link rel="stylesheet" href="./styles.css">
     <title>Document</title>
 </head>
-<body>
-    
+
+<body class="antialiased text-gray-800 bg-white p-4 dark:bg-gray-800 dark:text-gray-100">
+    <div class="space-y-14 max-w-3xl mx-auto divide-y-2 divide-gray-100 dark:divide-gray-700">
+
+        <div class="flex justify-end items-center space-x-2">
+            <span class="text-sm text-gray-800 dark:text-gray-500">Light</span>
+            <div>
+                <input type="checkbox" id="toggle" class="hidden">
+                <label class="cursor-pointer" for="toggle">
+                    <div class="w-9 h-5 flex items-center bg-gray-300 dark:bg-gray-600 rounded-full p-1">
+                        <div
+                            class="w-4 h-4 rounded-full bg-white shadow-md toggle-dot transform duration-300 ease-in-out">
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <span class="text-sm text-gray-500 dark:text-gray-100">Dark</span>
+        </div>
+
+        <div
+            class="p-4 md:p-8 rounded-sm flex flex-col space-y-10 md:space-y-0 md:space-x-10 md:space-x-reverse md:flex-row-reverse">
+            <div class="space-y-4">
+                <div class="space-x-1">
+                    <span class="px-4 py-1 bg-blue-200 dark:text-gray-600 rounded-full text-xs cursor-pointer font-semibold">label 1</span>
+                    <span class="px-4 py-1 bg-blue-200 dark:text-gray-600 rounded-full text-xs cursor-pointer font-semibold">label 1</span>
+                </div>
+                <h2 class="text-3xl font-bold">Lorem ipsum dolor sit amet.</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur similique sint iste quod sequi
+                    soluta maiores. Vitae incidunt quam possimus.
+                </p>
+                <button
+                    class="text-sm tracking-wide hover:bg-blue-600 uppercase px-4 py-2 bg-blue-700 text-white rounded-sm">
+                    read more
+                </button>
+            </div>
+            <img class="rounded-sm" src="https://picsum.photos/200?random=1" alt="">
+        </div>
+
+        <div class="md:p-8 p-4 flex flex-col space-y-10 md:space-y-0 md:flex-row md:space-x-10 rounded-sm">
+            <div class="space-y-4">
+                <div class="space-x-1">
+                    <span class="px-4 py-1 bg-blue-200 dark:text-gray-600 rounded-full text-xs cursor-pointer font-semibold">label 1</span>
+                    <span class="px-4 py-1 bg-blue-200 dark:text-gray-600 rounded-full text-xs cursor-pointer font-semibold">label 1</span>
+                </div>
+                <h2 class="text-3xl font-bold">Lorem ipsum dolor sit amet.</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur similique sint iste quod sequi
+                    soluta maiores. Vitae incidunt quam possimus.
+                </p>
+                <button
+                    class="text-sm tracking-wide hover:bg-blue-600 uppercase px-4 py-2 bg-blue-700 text-white rounded-sm">
+                    read more
+                </button>
+            </div>
+            <img class="rounded-sm" src="https://picsum.photos/200" alt="">
+        </div>
+    </div>
+    <script>
+        const checkbox = document.querySelector('#toggle')
+        const html = document.querySelector('html')
+        checkbox.addEventListener('change', () => {
+            html.classList.toggle('dark')
+        })
+    </script>
 </body>
+
 </html>
